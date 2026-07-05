@@ -58,3 +58,28 @@ navItems.forEach(item => {
         this.classList.add('active');
     });
 });
+
+
+
+// console.log("🚨 TRACKER 1: index.js is successfully running!");
+
+//const toggleSwitch = document.querySelector('#checkbox');
+//console.log("🚨 TRACKER 2: Did I find the toggle switch?", toggleSwitch);
+
+//const body = document.body;
+
+// if (toggleSwitch) {
+    //toggleSwitch.addEventListener('change', function(event) {
+      //  console.log("🚨 TRACKER 3: The switch was just clicked! Is it checked?", event.target.checked);
+        
+       // if (event.target.checked) {
+         //   body.classList.add('dark-mode');
+           //  console.log("🚨 TRACKER 4: Added 'dark-mode' class to body.");
+         //} else {
+        //     body.classList.remove('dark-mode');
+        //     console.log("🚨 TRACKER 4: Removed 'dark-mode' class from body.");
+       //  }
+     //});
+ //} else {
+  //   console.error("❌ ERROR: Could not find the checkbox in the HTML!");
+ //}
