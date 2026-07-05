@@ -573,7 +573,7 @@ section.projects-section {
 
 .projects-container {
   max-width: 1200px;
-  margin: 0 12%;
+  margin:  12%;
 }
 
 .section-header {
@@ -1169,6 +1169,23 @@ section.contact-section {
   transform: scale(0.98);
 }
 
+.about-me-section, 
+.project-section, 
+.services, 
+.contact-section {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    box-sizing: border-box !important; 
+}
+
+/* If your project cards are inside a specific container, this stops them from breaking out */
+.projects-container,
+.project-card {
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 1024px) {
     main {
         padding: 100px 5% 40px 5%; 
@@ -1400,7 +1417,33 @@ section.contact-section {
     
     .contact-form-card {
         padding: 2rem 1.5rem;
+    }/* --- DESKTOP MODE (LAPTOPS & MONITORS) --- */
+@media (min-width: 769px) {
+    
+    .about-me-section, 
+    .project-section, 
+    .services, 
+    .contact-section {
+        width: 100% !important;         /* <-- THIS IS THE MISSING MAGIC KEY */
+        max-width: 1100px !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        padding-left: 20px !important; 
+        padding-right: 20px !important;
     }
+
+    .projects-container {
+        display: grid !important;
+        /* Changed 400px to 300px so it doesn't break out on smaller laptops */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; 
+        gap: 40px !important; 
+        align-items: start;
+        justify-content: center !important; /* Forces the grid itself to stay centered */
+    }
+}
+
+  
+    
 }
 
 @media (max-width: 425px) {

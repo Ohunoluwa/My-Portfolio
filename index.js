@@ -43,3 +43,18 @@ window.addEventListener('scroll', () => {
         header.classList.remove('header-scrolled');
     }
 });
+
+// 1. Grab every single navigation link on the page
+const navItems = document.querySelectorAll('nav a'); 
+
+// 2. Listen for a click on ANY of those links
+navItems.forEach(item => {
+    item.addEventListener('click', function() {
+        
+        // 3. REMOVE the active class from every single link first
+        navItems.forEach(link => link.classList.remove('active'));
+        
+        // 4. ADD the active class ONLY to the exact link you just clicked
+        this.classList.add('active');
+    });
+});
